@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto"></p>
+    <script>
+        //Strings:
+        //Funciones interesenates:
+        //template literal
+        let name = "Pedro"
+        console.log(`Hello ${name}`)
+        //typeof
+        console.log(typeof name)
+        //.length
+        console.log(name.length)
+        //.includes()
+        console.log(name.includes("e"))
+        //.slice(start,end)
+        console.log(name.slice(0,4)) //star-> incluido, end --> no incluido
+        //.replace('este texto','por este otro')
+        console.log(name.replace("dro","rico"))
+        //.trim()
+        name = "   " + name + "    "
+        name = name.trim()
+        console.log(name)
+        let nombres = name + " Pepe paco luis perro"
+        //.split(' ')
+        console.log(nombres.split(" "))
+        
+        //Practica:
+        //Cambiar el texto por las varibles
+        /* Hola USUARIO, tenemnos un DESCUENTO  para el proximo JUEGO que sale ya */
+        /*let texto = "Hola USUARIO, tenemnos un DESCUENTO de descuento para el proximo JUEGO que sale ya"
+        const nombre = "Pedro"
+        const descuento = "20%"
+        const juego = "cs2"
+        texto = texto.replace("USUARIO", nombre)
+        texto = texto.replace("JUEGO", juego)
+        texto = texto.replace("DESCUENTO", descuento)
+        console.log(texto)
+        */
+        const nombre = "Pedro"
+        const descuento = "20%"
+        const juego = "cs2"
+        const texto = `Hola ${nombre}, tenemnos un ${descuento} de descuento para el proximo ${juego} que sale ya`
+        document.querySelector("#texto").innerHTML = texto
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Tipo de dato (typeof)
+        let num = 4;
+        console.log(typeof num)
+        console.log(typeof ("asd" + 2))
+        //Otras funciones:
+        //isNaN() : bool
+        //toString : string
+        //toFixed() -redondea p.e: num.toFixed(2) : 4.00
+        //Ejercicio dividir la cuenta:
+        const TOTAL = 103;
+        const PERSONAS = 6.00;
+        console.log("Ha cada uno le toca pagar " + (TOTAL/PERSONAS).toFixed(2))
+
+        //Ejercicio aplicar descuento 10%
+        const PRODUCTO_1= 300;
+        const PRODUCTO_2= 30;
+        const PRODUCTO_3= 10;
+        const DESCUENTO=10;
+        const PRECIO_FINAL = (PRODUCTO_1+PRODUCTO_2+PRODUCTO_3)-(PRODUCTO_1+PRODUCTO_2+PRODUCTO_3)/100*DESCUENTO
+        console.log(PRECIO_FINAL)
+    </script>
+</body>
+</html>

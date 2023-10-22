@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Tipos de declaraciones:
+        var persona = {
+            nombre : "Pedro",
+            edad : 22,
+            saludar : function () {
+                console.log("Hola "+this.nombre)
+            }
+        }
+        console.log(persona.saludar())//Como la funcion saludar no devuelve nada
+        //Tambien se pinta por consola undefined
+
+        let jugador1 = {
+            fuerza : 1,
+            incrementarFuerza : function (){
+                this.fuerza++
+            },
+            consultarFuerza : function (){
+                return this.fuerza
+            }
+        }
+
+
+        console.log(jugador1)
+
+
+    </script>
+</body>
+</html>

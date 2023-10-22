@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Objeto Math (Documentacion JS)
+        let pi = Math.PI;
+        console.log(pi)
+        console.log(Math.min(1,2,3,4,5,6,76,7,-10))
+        
+        let matriz = [1,2,3,4,5,6,7,7]
+        console.log(Math.max(matriz))
+
+        console.log(Math.round(4.5))//5
+        console.log(Math.floor(4.8))//4
+        console.log(Math.ceil(4.3))//5
+
+        //Numero random
+        let aleatorio = Math.random() //numero aleatorio entre 0 y 1
+        console.log(parseInt(aleatorio * 100))
+
+        function generarNumero(numMaximo){
+            return Math.round(Math.random() * numMaximo)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Primera clase practica de DOM</h1>
+    <h1>Prueba</h1>
+    <script>
+        let h1 = document.getElementById("h1")
+        h1.style.color = "red"
+
+        let titulos = document.getElementsByTagName('h1')
+        //devuelve un array de todos los h1 que haya
+        titulos[1].style.backgroundColor = "green"
+    </script>
+</body>
+</html>

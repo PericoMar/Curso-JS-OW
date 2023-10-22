@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Funciones
+        //Declaracion:
+        let message = "Hola mundo"
+        function sayHello(message) {
+            document.write(`<p>${message}</p>`)
+        }
+        sayHello(message)
+        //Funcion con parametros con valor por defecto.
+        function sayHelloName(nombre = "Pedro") {
+            document.write(`<p>Hola ${nombre}</p>`)
+        }
+        sayHelloName()
+        sayHelloName("Pepe")
+        //Funciones anonimas:
+        let sum = function(num1, num2){
+            console.log(num1 + num2)
+        }
+        sum(1,2)
+        //Arrow function
+        const mensaje = "Whatever"
+        var sayMessage = () => mensaje //return implicito (sin {})
+        var sayBye = () => { return "Bye World" } //Se puede usar la palabra resrevada return (con {})
+        console.log(sayMessage())
+        console.error("hola")
+    </script>
+</body>
+</html>
