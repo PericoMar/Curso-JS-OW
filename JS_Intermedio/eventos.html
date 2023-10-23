@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    
+    <script>
+        //Eventos ejemplos:
+        //Teclado:
+        //keyDown: Tecla Hundida
+        //KetUp: Al dejar de presionar una tecla
+        
+        //Raton:
+        //onclick
+        //onmousedown
+        //onmousenter: cuando entra el cursor dentro de un elemento
+        //onmousemove
+
+        //Eventos del navegador:
+        //DOMContentLoaded: Se ha cargado la pagina
+
+        var p = document.createElement("p")
+        document.body.appendChild(p)
+        document.addEventListener("keydown" , (ev) => {
+            p.textContent = ev.key
+        })
+
+        //Disparar un evento propio:
+        document.addEventListener("eventoCualquiera", (ev)=> {
+            console.log(ev)
+        })
+        var event = new CustomEvent("eventoCualquiera", {'detail' : 'Hola Pedro'})
+        document.dispatchEvent(event)
+        
+    </script>
+</body>
+</html>
