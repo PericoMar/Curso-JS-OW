@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Hablamos de los operadores que ya los conocemos
+        //Una cosa nueva es el destructuring
+        let variable = [2,4];
+        // let uno = varaible[0];
+        // let dos = variable[1];
+
+        //Con destructuring:
+        let [uno,dos] = variable;
+
+        //Operaciones ambiguas:
+        console.log((-4)**2) //Obliga a poner ()
+        console.log(10/0) //Devuelve Infinity
+
+        //Operador ternario ?: 
+        uno % 2 == 0 ? console.log("Es par") :console.log("Es impar");
+
+        //Para evitar valores como null o undefined
+        let a = null;
+        let b = 4;
+
+        let res = a || b; // -> 4
+    </script>
+</body>
+</html>

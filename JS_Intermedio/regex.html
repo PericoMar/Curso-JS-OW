@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+
+    <script>
+        //Ejemplo:
+        regex = /[a]/gi // Empieza y termina con "/"
+        //la g significa que es global y la i que no sea caseSensitive
+        ejemploCadena = "probaaando laaas regex en JAAAvaaAscript"
+        //Funciones:
+        console.log(ejemploCadena.search(regex))
+        console.log(regex.exec(ejemploCadena)) //Devuelve array 
+        //Va buscando coincidencias dependiendo de cuantas veces lo ejecutes.
+        //p.e:  la primera vez primera coincidencia la segunda, segunda coincidencia
+        console.log(regex.exec(ejemploCadena)) 
+        console.log(regex.test("AAA aaa laaas aaA"))    
+        console.log(regex.test("probaaando laaas regex en JAAAvaaAscript")) //Devuelve bool
+        console.log(regex.test("Ayudaaame"))
+        console.log(ejemploCadena.match(regex))
+        let objeto = {
+            color : "red"
+        }
+        console.log(objeto.size)
+    </script>
+</body>
+</html>

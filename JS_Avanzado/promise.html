@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JS es sincrono por definicion.
+        //Solo dispone de una unica pila de llamadas
+        //Esto es perjudicial en muchos casos para la interaccion
+        //con el usuario.
+
+        //Esto se resuelve gracias al ciclo de eventos.
+        //Las promesas nos permiten realizar tareas de forma
+        //asincrona, que puede ser resueltas en el momento, mas tarde o
+        //nunca.
+        //1.-PENDING
+        //Fullfilled (.then(exitoFn)) o Reject (.then(erroFn), .catch(errorFn))
+        //Si esta fullfill -> Acciones Async o otra PROMESA (.then.catch).
+        //Sino Error o otra PROMESA (.then.catch).
+        function compruebaNombre(nombre) {
+            return new Promise(function (resolve, reject) {
+                if (nombre === 'Pablo') {
+                    resolve("¡Bien! Te llamas Pablo");
+                } else {
+                    reject("Un momento ¡Tú no eres Pablo!");
+                }
+            });
+        }
+        compruebaNombre('Pablo')
+            .then(response => console.log(response))
+            .catch(error => console.log(error))
+        //Esto imprime '¡Bien! Te llamas Pablo'
+        //por consola
+
+        //Una promesa recibe dos manejadores o callbacks, el de
+        //resolucion(.then) y el de rechazo8(.catch).
+
+        //Se pueden encadenar todos los then catch que queramos
+
+        //Podemos usar finally() (no en todos los navegadores) que se ejecutara al final de una
+        //promesa siempre al final independientemente del estado en el que
+        //se encuentre.
+
+        Promise.all(array) //--> Recibe array de promesa y devuelve una promesa
+        //cuyo valor es un array de valores si tiene exito o la primera razon de fallo si alguna falla
+
+        Promise.race(array) // --> Recibe un iterable de promesas y devuelve una promesa cuyo valor
+        // es el de la primera resuelta si tiene exito o la primera razon de fallo si
+        //falla alguna.
+
+
+        Promise.reject(razon) //Devuelve una promesa rechazada con la razon que especifiquemos.
+
+        Promise.resolve(valor) //Devuelve una promesa resuelta con el valor que especifiquemos.
+
+
+    </script>
+</body>
+
+</html>

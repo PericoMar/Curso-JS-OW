@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Una estructura de datos es una organizacion de los datos
+        //que permite optimizar su uso.
+
+        //Set. Estructura de datos compuesta de datos unicos.
+        //Util para sacar los objetos filtrados de manera unica
+        const A = [1, 2, 3, 4, 2, 3]
+        let set = new Set(A);
+        console.log(set)
+        //Metodos, has ,add y delete
+        set.has(2) // true
+        set.has(5) // false
+
+        set.add(2) // no añade, ya existe
+        set.add(5) // añade el 5
+
+        set.delete(5)
+
+        //Util para trabajar con objetos que queremos que sean unicos
+        //que tengan distinta direccion de memoria
+
+
+        //Map. Permite crear coleccion clave->valor.
+        //Sus referencias pueden ser objetos, funciones o
+        //cualquier tipo primitivo.
+        //Es iterable.
+        const mapEjemplo = new Map([['a', 1],['b', 2]])
+
+        mapEjemplo.has('a') // true
+        mapEjemplo.set('c', 5)
+        mapEjemplo.get('c') // 5
+
+        mapEjemplo.delete('a')
+        mapEjemplo.size 
+
+        //NO NATIVAS DE JAVASCRIPT:
+
+        //Colas y pilas:
+        //Pila -> Stack (length, stack, unstack)
+        class Stack {
+            constructor(in_items) {
+                this.items = in_items || [];
+            }
+            length() {
+                return this.items.length;
+            }
+            stack(el) {
+                // Añade un elemento a items
+                this.items.push(el);
+            }
+            unstack() {
+                // Devuelve el ultimo elemento O undefined
+                return this.length() > 0 ? this.items.pop() : undefined;
+            }
+        }
+
+        //Cola -> Queue (length, enqueue , dequeue)
+        class Queue {
+            constructor(in_items) {
+                this.items = in_items || [];
+            }
+            length() {
+                return this.items.length;
+            }
+            enqueue(el) {
+                // Añade un elemento a items
+                this.items.push(el);
+            }
+            dequeue() {
+                // Devuelve el primer elemento O undefined
+                return this.length() > 0 ? this.items.shift() : undefined;
+            }
+        }
+
+        //Listas enlazadas:
+        //Una lista enlazada es una estructura de datos donde cada miembro
+        //tiene referencia al miembro siguiente.
+        //Son utiles para las representacion de estructuras comos grafos
+
+    </script>
+</body>
+
+</html>
