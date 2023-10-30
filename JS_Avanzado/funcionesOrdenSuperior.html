@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Funciones de primera clase -> las funciones pueden ser tratadas como cualquier variable
+
+        //Puede pasarse como parametro, retornarse o asignarse a una variable
+
+        const doble = (x) => {
+            return x * 2;
+        }
+
+        doble(22) //44
+
+        function aplicarFuncion(func, x) {
+            return func(x);
+        }
+
+        aplicarFuncion(doble, 4); //8
+
+        //Las funciones en JS tienen un entorno interno que se llama CLOSURE:
+        //En una funcion cualquiera, el scope interno tiene una visibilidad limitada
+        //a su ejecucion, es decir, el scope no se preserva entre ejcuciones.
+        const sinClosure = () => {
+            let counter = 0
+            return ++counter
+        }
+        console.log(sinClosure()) // -> 1
+        console.log(sinClosure()) // -> 1
+        console.log(sinClosure()) // -> 1
+
+        //Sin embargo si devolvemos una funcion anonima dentro de una funcion, la funcion 
+        //resultante tiene acceso a las variales definidas en la funcion generadora,
+        //esto es el llamada clousure.
+
+        const conClosure = () => {
+            let counter = 0
+            return () => ++counter
+        }
+        const incrementar = conClosure()
+        console.log(incrementar())// -> 1
+        console.log(incrementar())// -> 2
+        console.log(incrementar())// -> 3
+
+        //Nos permite tener un scope privado que solamente puede ver la funcion.
+        //Cada ejecucion genera un closure propio
+
+        const closure = () => {
+            let nombre = 'No hay nombre'
+            return {
+                setNombre: (valor) => {nombre = valor},
+                getNombre: () => nombre
+            }
+        }
+
+        const persona = closure();
+        console.log(persona.nombre) // -> undefined
+        console.log(persona.getNombre()) // -> No hay nombre
+        console.log(persona.setNombre('prueba')) 
+        console.log(persona.nombre) // -> undefined
+        console.log(persona.getNombre()) // -> prueba
+
+        //Funciones de Orden superior:
+        //Las funciones de orden superior son una abstraccion de tareas comunes para funciones.
+        //Parecido a refactorizar.
+    </script>
+</body>
+
+</html>

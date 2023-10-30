@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Funciones puras:
+        //Los mismos parametros siempre devuelven el mismo resultado
+
+        //Sin dependencias de datos entre las funciones, es posible invertir 
+        //el orden de llamadas, es decir, F(G(x,y))== G(F(x,y))
+
+        //P.e:
+        const dobleNumero = (x) => {
+            return x * 2;
+        }
+
+        const mitadNumero = (x) => {
+            return x / 2;
+        }
+
+        dobleNumero(mitadNumero(4));
+        mitadNumero(dobleNumero(4));
+
+        //Ambas devuelven 4
+
+        //Sin embargo si lo hacemos con dobleNumero y cuadradoNumero, no daran el mismo resueltado
+        //pero se debe a que hay dependencias de datos entre las funciones.
+    </script>
+</body>
+
+</html>
