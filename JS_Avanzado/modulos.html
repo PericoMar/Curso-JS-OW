@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Los modulos son scripts auto-contenidos que reunen un conjunto
+        //de funciones o clases con un espacio de nombres propio
+
+        //La mantebilidad es una ventaja principal, al ser auto-contenido el
+        //módulo no tiene dependencia del resto del código.
+
+        //Existen varias librerias de modulos para JavaScript:
+        //CommonJS, AMD, UMD, ES6 Modules
+
+        //p.e:
+        function miModulo(){
+            this.hola = function(){
+                return 'hola';
+            }
+            this.adios = function(){
+                return 'adios';
+            }
+        }
+        module.exports = miModulo;
+
+        var miModulo = require('miModulo');
+        var instancia = new miModulo();
+        instancia.hola();
+        instancia.adios();
+    </script>
+</body>
+</html>

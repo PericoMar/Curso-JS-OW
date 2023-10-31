@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Es habitual tener librerias de funciones auxiliares.
+        //Sin embargo estas funciones en ocasiones requieren de varaibles que pueden
+        //resultar caóticas si se definen a nivel global.
+
+        //Acercamiento modular:
+        //Se trata de encapsular las variables y funciones en un objeto.
+        const miModulo = function(){
+            var prom = 0.5;
+            return {
+                sumaPromedia : function(a,b){
+                    return (a+b)*prom;
+                },
+                restaPromedia : function(a,b){
+                    return (a-b)*prom;
+                }
+            }
+        }
+
+        const {sumaPromedia, restaPromedia} = miModulo();   //Destructuring
+        sumaPromedia(2,3);
+        //Si cambiase el valor de prom me daria error, ya que no es una variable global.
+        restaPromedia(2,3);
+        
+    </script>
+</body>
+</html>
