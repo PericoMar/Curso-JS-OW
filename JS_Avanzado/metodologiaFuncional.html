@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //No se debe de hacer uso de bucles de iteracion
+
+        //Siempre se usa const
+
+        //De igual manrea las mutaciones de objetos y los metodos que
+        //producen mutaciones como fil, pop, push no se consideran buena practica
+
+        //Busqueda de la inmutabilidad:
+
+        const variable1 = [1,2,3];
+        const variable2 = Array.from(variable1);
+
+        const variable3 = [1,2,3];
+        const variable4 = [...variable3]; //Operador spread(...) para copiar el array
+
+        //Tambien se puede hacer uso con objetos:
+        const miObj1 = {a : 1, b : 2};
+        const miObj2 = {...miObj1};
+
+        //Tambien se puede usar para pasar arrays como parametro:
+        const miArray = [1,2,3];
+        function miFuncion(...miArray){
+            console.log(miArray);
+        }
+
+        //Tambien se puede usar para pasar objetos como parametro:
+        const miObj = {a : 1, b : 2};
+        function miFuncion2(...miObj){
+            console.log(miObj);
+        }
+
+        //Para evitar el uso de bucles se suele hacer uso de la recursión.
+
+        //Currificacion: Es una tecnica que consiste en transformar una funcion de N argumentos
+        //en N funciones de 1 argumento.
+        //Es una forma de reutilizar funciones.
+        //Ejemplo:
+        //Sin currificacion:
+        function esDivisible(num,text){
+            return text % num == 0;
+        }
+
+        //Currificada:
+        function esDivisible(num){
+            return function(text){
+                return text % num == 0;
+            }
+        }
+
+        const esDivisiblePor3 = esDivisible(3);
+        esDivisiblePor3(18); //true
+        esDivisiblePor3(19); //false
+        const esDivisiblePor5 = esDivisible(5);
+        esDivisiblePor5(20); //true
+        esDivisiblePor5(21); //false
+        
+    </script>
+</body>
+</html>

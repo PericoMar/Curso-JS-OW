@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Un modulo nativo de JS es un script normal que exporta una serie
+        //de funciones o clases con la palabra reservada export.
+
+        //Una ventaja es que los navegadores los tratan de manera distinta,
+        //optimizando las importaciones.
+
+        //p.e:
+        //modulo.mjs
+
+        const prom = 0.5;
+
+        function sumaPromedia(a,b){
+
+            return (a+b)*prom;
+
+        }
+
+        function restaPromedia(a,b){
+
+            return (a-b)*prom;
+
+        }
+
+        export{sumaPromedia, restaPromedia};
+
+        //main.js:
+        import{sumaPromedia, restaPromedia} from 'modulo.mjs';
+
+        //Tambien se pueden importar los modulos con cualquier nombre con export default:
+        export default sumaPromedia;
+        import sumaPromedia from 'modulo.mjs';
+        
+    </script>
+    <!-- Tambien se puede hacer uso de modulos en HTML: -->
+    <script type="module" src="modules/moduloEjemplo.mjs"></script>
+</body>
+</html>
