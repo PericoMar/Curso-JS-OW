@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.js"></script>
     <title>Selectores</title>
 </head>
 <body>
     
     <script>
         $(function() {
-            //... $("...").accion ...
-            //... $("...").handler ...
-             
+            //... $("selector").accion ...
+            //... $("selector").handler ...
+            // * 
+            // $("*").hide(); Esconde todo
+            //Selector por etiqueta
+            // $("img").hide(); Esconde todas las imagenes
+            //Selector por clase
+            // $(".primero").hide(); Esconde todos los elementos con la clase primero
+            //Selector por id
+            // $("#primero").hide(); Esconde el elemento con el id primero
+            //Tambien podemos usar selectores como:
+            // elemento1 elemento2 para seleccionar todos los elementos2 que esten dentro de elemento1
+            // elemento1, elemneto2 para seleccionar todos los elementos1 y todos los elementos2
+            // elemento1 > elemento2 para seleccionar todos los elementos2 que sean hijos directos de elemento1
+            // elemento1 + elemento2 para seleccionar todos los elementos2 que sean hermanos directos de elemento1
+            // elemento1 ~ elemento2 para seleccionar todos los elementos2 que sean hermanos de elemento1
+            // [atributo] para seleccionar todos los elementos que tengan el atributo
+            $("input[type='password']").accion; //Esconde todos los input de tipo password
+            //Si el selector me devuelve varios y yo quiero actuar sobre una sola usamos:
+            // eq: $("selector").eq(indice).accion
+
+            //Selectores II:
+            // :hover para seleccionar todos los elementos que esten en hover
+            // :checked para seleccionar todos los elementos que esten checked
+            // :visited para seleccionar todos los elementos que esten visitados
+            // :required para seleccionar todos los elementos que esten required
+            // :first-of-type para seleccionar el primer elemento de su tipo
+            // :nth-child(n) para seleccionar el elemento que ocupa la posicion n
+            // ::after para seleccionar el contenido que se agrega despues del elemento
+            // ::before para seleccionar el contenido que se agrega antes del elemento
+            // etc...
         })
     </script>
 </body>

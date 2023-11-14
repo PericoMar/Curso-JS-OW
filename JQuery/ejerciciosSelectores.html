@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.js"></script>
+    <title>Ejercicio</title>
+</head>
+<body>
+    <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+    <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+    <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+    <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+    <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+    <table>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+            <td>Elemento 5</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+            <td>Elemento 5</td>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+            <td>Elemento 5</td>
+        </tr>
+    </table>
+    <script>
+        //Seleccionar la primera columna de una tabla
+        $(" td:first-child").css("background-color", "red");
+        $(" td:nth-child(1)").css("background-color", "blue");
+        $(" tr td:first-of-type").css("background-color", "green");
+
+        //Seleccionar primer elemento de una lista:
+        $(" ul li:nth-child(1)").css("background-color", "yellow"); //Si nos fijamos en nth-child tenemos un indice que empieza en 1.
+        $(" ul li").eq(0).css("background-color", "yellow");        //Pero en el array de eq empieza en 0.
+
+        //Seleccionar la ultima imagen de mi pagina web:
+        $(" img:last-of-type").css("border", "5px solid black");
+    </script>
+</body>
+</html>
