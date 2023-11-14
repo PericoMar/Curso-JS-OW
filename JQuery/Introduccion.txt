@@ -1,0 +1,22 @@
+JQuery:
+Libreria de JavaScript.
+
+Caracteristicas:
+
+- Manipulacion de DOM.
+- Selectores avanzados.
+- Eventos.
+- Efectos y animaciones.
+- Ajax.
+- Parseado json.
+- Extensible.
+- Compatibilidad para navegadores.
+- Sencillo
+
+Desventajas:
+- Ya no es necesario (estandarzación API en navegadores).
+- Rendimiento no es optimo.
+- Abandonada por BootStrap 5 y gitHub.
+- Sintaxis poco legible para proyectos grandes.
+- Nuevos frameworks (Angular, React).
+
