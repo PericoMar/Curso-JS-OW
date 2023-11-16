@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+        <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+        <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+        <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+        <img src="img/descarga.png" alt="imagen" width="200px" height="200px">
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+        </ul>
+        <table>
+            <tr>
+                <td>Elemento 1</td>
+                <td>Elemento 2</td>
+                <td>Elemento 3</td>
+                <td>Elemento 4</td>
+                <td>Elemento 5</td>
+            </tr>
+            <tr>
+                <td>Elemento 1</td>
+                <td>Elemento 2</td>
+                <td>Elemento 3</td>
+                <td>Elemento 4</td>
+                <td>Elemento 5</td>
+            </tr>
+            <tr>
+                <td>Elemento 1</td>
+                <td>Elemento 2</td>
+                <td>Elemento 3</td>
+                <td>Elemento 4</td>
+                <td>Elemento 5</td>
+            </tr>
+        </table>
+    <script>
+        $(function(){
+            //has: elementos que tengan el parametro:
+            $("form").has("input[type='password']");
+            //contains: continen texto especifico:
+            $("tbody td:contains('1')").hide();
+            //:even / :odd para las filas y pares o impares:
+            $("tbody tr:odd").hide();
+            $("tbody tr:even").hide();
+            $("tbody tr:odd").show();
+            $("tbody tr:even").show();
+            //gt para borrar a partir de un indice:
+            //lt para borrar los que estan por debajo del indice indicado.
+            $("img:lt(2)").hide();
+            //first te coge el primer elemento 
+            $("img").first().show();
+        });
+    </script>    
+</body>
+</html>
