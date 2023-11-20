@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- CDN de Google (Hosted Libraries) -->
+    
+</head>
+<body>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+    </ul>
+
+    
+    <script>
+        //Cuando tengo muchos elemento y quiero hacer algo con cada uno de ellos
+        //Uso el each y el this
+        $("some_selector").each(function(index){
+            //Accion que dependerá del elemento
+            $(this).accion();
+        })
+
+        //Ejemplo
+        $("li").each(function(index){
+            //Accion que dependerá del elemento
+            $(this).text("Letra " + $(this).text());
+            if(index % 2 == 0){
+                $(this).css("font-size", "30px");
+            }
+        })
+    </script>
+</body>
+</html>
