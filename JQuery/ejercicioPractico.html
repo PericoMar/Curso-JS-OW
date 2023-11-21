@@ -58,11 +58,16 @@
         //Celdas de la primera columna:
         $("td:nth-child(1):contains('Manolo')").text("Pedro");
 
-        //Ejemplo practic$("tr:gt(0)").each(function(index){
-        // $("tr:gt(0)").each(function (index) {
-        //     $(this).children("td:gt(0):lt(3)").each(function (index) {
-
-        //     });
+        let media;
+        $("tr:gt(0)").each(function (index) {
+            media = 0;
+            $(this).children("td:gt(0):lt(3)").each(function (index) {
+                media = parseFloat($(this).text()) + media;
+            })
+            media = media / 3;
+            $(this).children("td:eq(4)").text(media);
+            media => 5 ? $(this).css("color", "green") : $(this).css("color", "red")
+        });
 
     </script>
 </body>
