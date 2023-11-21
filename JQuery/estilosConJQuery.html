@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <script>
+        $(function() {
+            // Si quiero obtener el valor del PRIMER ELEMENTO QUE OBTENGO:
+            let valor = $("some_selector").css("propiedad");
+
+            // Si quiero cambiar el valor
+            $("some_selector").css("propiedad","valor");
+
+            // Establecer el valor de una propiedad a todos los elementos:
+            // value hace referencia al valor antiguo de esa propiedad.
+            $("some_selector").css("property", function(idex,value){
+                //$(this)
+            })
+
+            // Si quiero cambiar varias propiedades de un selector podemos
+            // usar objetos de JS:
+            $("some_selector").css({
+                "prop1" : "value",
+                "prop2" : "value"
+            });
+
+            // Si quiero obtener varias propiedades lo asigno a un array.
+            let propiedades = $("some_selector").css("prop1","prop2","prop3","propN");
+
+            //Tambien hay etiquetas propias de JQuery como width o height.
+        });
+    </script>
+</body>
+</html>
