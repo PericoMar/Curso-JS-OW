@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.js"></script>
+    <title>Valores y contenidos</title>
+</head>
+<body>
+    <ul>
+        <li>
+            Ejemplo
+        </li>
+    </ul>
+    <script>
+        $(function(){
+            //Obtengo el html de el selector:
+            var lista = $("ul.iconized").html();
+            
+            //Le cambio el HTML:
+            $("ul").html("<li>CAMBIO</li>");
+
+            //text():
+            //Es como la la funcion html pero obvia las etiquetas:
+            var texto = $("ul").text();
+            console.log(texto);
+        })
+    </script>
+</body>
+</html>
