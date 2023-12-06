@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <input id="ej" type="text" value="Pepe" />
+
+    <script>
+        $(function (){
+            //No son lo mismo Atributos y Propiedades.
+            /*
+            El método prop() en jQuery se utiliza principalmente para acceder y 
+            modificar las propiedades de un elemento HTML. Aunque prop() y attr() 
+            pueden parecer similares, tienen diferencias importantes en su funcionamiento.
+
+            prop() vs. attr():
+
+            prop(): Este método se utiliza principalmente para acceder y modificar las 
+            propiedades de los elementos del DOM, como las propiedades 
+            booleanas (checked, disabled, selected, etc.). Por ejemplo:
+            */
+            // Obtener el estado 'checked' de un checkbox
+            var isChecked = $('#miCheckbox').prop('checked');
+
+            // Establecer el estado 'disabled' de un botón
+            $('#miBoton').prop('disabled', true);
+
+            /*
+            attr(): Se utiliza para acceder y modificar los atributos de los elementos HTML, como href, src, class, etc.
+            */
+            // Obtener el valor del atributo 'href' de un enlace
+            var linkHref = $('a').attr('href');
+
+            // Establecer el valor del atributo 'src' de una imagen
+            $('img').attr('src', 'nueva-imagen.jpg');
+
+            /*
+            En resumen, mientras prop() se enfoca en las propiedades de los elementos del DOM,
+            especialmente en aquellas propiedades que reflejan estados (como booleanos), attr() 
+            se centra en los atributos HTML de los elementos.
+
+            Sin embargo, en versiones más recientes de jQuery, el uso de prop() se ha vuelto más 
+            común para manipular ciertos estados de elementos, como los estados booleanos (checked, disabled, selected),
+             ya que reflejan el estado actual del elemento en el DOM, mientras que attr() manipula directamente los atributos del HTML.
+            */
+
+            console.log($("#ej").attr("value"));
+            console.log($("#ej").prop("value"));
+            
+
+            //Atributos:
+            //attr()
+            //removeAttr()
+            var url = $("a").attr("href");
+
+            $("a").attr("target","_blank");
+
+            $("#miprofile").attr({
+                alt : "Foto de mi cara",
+                title : "Foto hecha por mi"
+            });
+
+            //Propiedades:
+            //prop()
+            //removeProp()
+
+            //No usar versiones anteriores a jQuery 1.6
+
+        })
+    </script>
+</body>
+</html>
